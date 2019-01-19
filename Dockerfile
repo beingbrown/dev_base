@@ -1,10 +1,12 @@
 FROM alpine:3.8
 
+ARG UN=user
+
 RUN apk add vim git
 
-ENV HOME /home/user
-RUN adduser -D -h $HOME user
-RUN chown -R user:user $HOME
+ENV HOME /home/$UN
+RUN adduser -D -h $HOME $UN
+RUN chown -R $UN:$UN $HOME
 
-USER user
+USER $UN
 WORKDIR $HOME
