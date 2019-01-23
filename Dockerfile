@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 ARG UN=user
-ARG DOTS
+ARG DOTS=https://github.com/beingbrown/dev_base.git
 
 RUN apk add vim git git-perl
 
