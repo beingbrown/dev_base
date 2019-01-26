@@ -4,7 +4,7 @@ ARG UN=user
 ARG DOTS=https://github.com/beingbrown/dev_base.git
 ARG TOOLS=""
 
-RUN apk add vim git git-perl $TOOLS
+RUN apk update && apk add vim git git-perl $TOOLS
 
 ENV HOME /home/$UN
 RUN adduser -D -h $HOME $UN
