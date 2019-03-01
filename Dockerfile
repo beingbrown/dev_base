@@ -1,4 +1,6 @@
-FROM alpine:3.8
+ARG VERSION=3.8
+
+FROM alpine:$VERSION
 
 ARG UN=user
 ARG DOTS=https://github.com/beingbrown/dev_base.git
