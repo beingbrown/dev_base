@@ -15,7 +15,7 @@ RUN apk update && \
             $TOOLS
 
 ENV HOME /home/$UN
-RUN adduser -D -h $HOME $UN
+RUN adduser -D -h $HOME -s /bin/bash $UN
 RUN chown -R $UN:$UN $HOME
 
 USER $UN
