@@ -3,7 +3,7 @@ ARG VERSION=3.8
 FROM alpine:$VERSION
 
 ARG UN=dev
-ARG DOTS=https://github.com/beingbrown/dev_base.git
+# ARG DOTS=https://github.com/beingbrown/dev_base.git
 ARG TOOLS=""
 
 RUN apk update && \
@@ -21,5 +21,5 @@ RUN chown -R $UN:$UN $HOME
 USER $UN
 WORKDIR $HOME
 
-RUN git clone $DOTS dots
-RUN ln -sv "dots/git/.gitconfig" $HOME
+# RUN git clone $DOTS dots
+# RUN ln -sv "dots/git/.gitconfig" $HOME
